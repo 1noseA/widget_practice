@@ -22,38 +22,49 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
+        body: TweetTile(),
+      ),
+    );
+  }
+}
+
+class TweetTile extends StatelessWidget {
+  const TweetTile({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CircleAvatar(
+            backgroundImage:
+              AssetImage('images/icon.png'),
+              backgroundColor: Colors.white,
+          ),
+          SizedBox(width: 8),
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CircleAvatar(
-                backgroundImage:
-                  AssetImage('images/icon.png'),
-                  backgroundColor: Colors.white,
-              ),
-              SizedBox(width: 8),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
                 children: [
-                  Row(
-                    children: [
-                      Text('nxxx@エンジニア4年生'),
-                      SizedBox(width: 8),
-                      Text('2025/01/02'),
-                    ],
-                  ),
-                  SizedBox(height: 4),
-                  Text('Flutter楽しい！'),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.favorite_border),
-                  ),
+                  Text('nxxx@エンジニア4年生'),
+                  SizedBox(width: 8),
+                  Text('2025/01/02'),
                 ],
+              ),
+              SizedBox(height: 4),
+              Text('Flutter楽しい！'),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.favorite_border),
               ),
             ],
           ),
-        ),
+        ],
       ),
     );
   }
