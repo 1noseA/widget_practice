@@ -22,7 +22,22 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: TweetTile(),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+              TweetTile(),
+            ],
+          ),
+        ),
       ),
     );
   }
