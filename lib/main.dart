@@ -10,7 +10,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'My App',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: Colors.blue,
+        ),
+      ),
     );
   }
 }
