@@ -44,12 +44,16 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 4),
-                  Text('Flutter楽しい！')
+                  Text('Flutter楽しい！'),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.favorite_border),
+                  ),
                 ],
               ),
             ],
           ),
-        )
+        ),
       ),
     );
   }
