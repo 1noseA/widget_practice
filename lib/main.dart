@@ -24,18 +24,29 @@ class MyApp extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
+              CircleAvatar(
+                backgroundImage:
+                  AssetImage('images/icon.png'),
+                  backgroundColor: Colors.white,
+              ),
+              SizedBox(width: 8),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('nxxx@エンジニア4年生'),
-                  SizedBox(width: 8),
-                  Text('2025/01/02'),
+                  Row(
+                    children: [
+                      Text('nxxx@エンジニア4年生'),
+                      SizedBox(width: 8),
+                      Text('2025/01/02'),
+                    ],
+                  ),
+                  SizedBox(height: 4),
+                  Text('Flutter楽しい！')
                 ],
               ),
-              SizedBox(height: 4),
-              Text('Flutter楽しい！')
             ],
           ),
         )
