@@ -22,6 +22,23 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text('nxxx@エンジニア4年生'),
+                  SizedBox(width: 8),
+                  Text('2025/01/02'),
+                ],
+              ),
+              SizedBox(height: 4),
+              Text('Flutter楽しい！')
+            ],
+          ),
+        )
       ),
     );
   }
