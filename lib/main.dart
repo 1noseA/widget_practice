@@ -22,21 +22,16 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-              TweetTile(),
-            ],
-          ),
+        body: ListView.separated(
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return TweetTile();
+          },
+          separatorBuilder: (context, index) {
+            return Divider(
+              color: Colors.grey, thickness: 1,
+            );
+          },
         ),
       ),
     );
